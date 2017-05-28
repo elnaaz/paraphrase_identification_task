@@ -87,7 +87,7 @@ GroupA for whole word embedding and GroupB for per-dimension convolution. They u
 
 For MSRP, they used hinge loss function as trainning and for other 2, they used Regularized KL-divergence loss.
 
-**GitHub Repo**: [https://github.com/hohoCode/textSimilarityConvNet](https://github.com/hohoCode/textSimilarityConvNet)
+**More Details on this work**: [Code](https://github.com/hohoCode/textSimilarityConvNet)
 
 **Bibliography**
 ```
@@ -162,7 +162,7 @@ They have experimented from two perspectives, namely, similarity-based classific
 
 **Expermental Dataset & Result**: [Microsoft Research Paraphrase Corpus](https://github.com/wasiahmad/Paraphrase-Identification-Task/tree/master/Dataset/MSRParaphraseCorpus). Accuracy is 80.4% and F1 score is 85.9%.
 
-**GitHub Repo**: [https://github.com/jiyfeng/tfkld](https://github.com/jiyfeng/tfkld)
+**More Details on this work**: [Code](https://github.com/jiyfeng/tfkld)
 
 **Bibliography**
 ```
