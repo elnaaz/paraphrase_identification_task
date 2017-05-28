@@ -68,6 +68,7 @@ They introduced dynamic pooling approach which generates fixed sized similarity 
 }
 ```
 
+---
 
 #### [Multi-Perspective Sentence Similarity Modeling with Convolutional Neural Networks](http://aclweb.org/anthology/D/D15/D15-1181.pdf)
 
@@ -99,6 +100,8 @@ For MSRP, they used hinge loss function as trainning and for other 2, they used 
 }
 ```
 
+---
+
 #### [Corpus-based and Knowledge-based Measures of Text Semantic Similarity](http://www.aaai.org/Papers/AAAI/2006/AAAI06-123.pdf)
 
 <p align="justify">
@@ -118,6 +121,8 @@ This paper demonstrates the effectiveness of two corpus-based and six knowledge-
   year={2006}
 }
 ```
+
+---
 
 #### [Re-examining Machine Translation Metrics for Paraphrase Identification](http://www.aclweb.org/anthology/N12-1019.pdf)
 
@@ -142,6 +147,8 @@ They explored eight most sophisticated MT metrics of the last few years that cla
   organization={Association for Computational Linguistics}
 }
 ```
+
+---
 
 #### [Discriminative Improvements to Distributional Sentence Similarity](http://www.aclweb.org/anthology/D/D13/D13-1090.pdf)
 
@@ -168,6 +175,8 @@ They have experimented from two perspectives, namely, similarity-based classific
 }
 ```
 
+---
+
 #### [Syntax-Aware Multi-Sense Word Embeddings for Deep Compositional Models of Meaning](http://www.aclweb.org/anthology/D/D15/D15-1177.pdf)
 
 <p align="justify">
@@ -189,6 +198,8 @@ They extended their model to address lexical ambiguity by applying a gated archi
   year={2015}
 }
 ```
+
+---
 
 #### [Using Dependency-Based Features to Take the “Para-farce” out of Paraphrase](http://www.alta.asn.au/events/altw2006/proceedings/swan-final.pdf)
 
@@ -213,6 +224,8 @@ For the N-gram Overlap features, they used precision, recall on unigrams, lemmat
 }
 ```
 
+---
+
 #### [A Semantic Similarity Approach to Paraphrase Detection](http://staffwww.dcs.shef.ac.uk/people/S.Fernando/pubs/clukPaper.pdf)
 
 <p align="justify">
@@ -232,6 +245,8 @@ This work presents an algorithm for paraphrase identification which makes extens
   organization={Citeseer}
 }
 ```
+
+---
 
 #### [Paraphrase Recognition via Dissimilarity Significance Classification](https://www.comp.nus.edu.sg/~kanmy/papers/paraphrase_emnlp2006.pdf)
 
