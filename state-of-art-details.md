@@ -14,12 +14,17 @@
 
 #### [Support Vector Machines for Paraphrase Identification and Corpus Construction](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/I05-50015B15D.pdf)
 
-**Essence**: This paper describes the extraction of parallel corpora from clustered news articles using annotated seed corpora and an SVM classifier, demonstrating that large parallel corpora can be induced by a classifier that includes morphological and synonymy features derived from both statis and dynamic resources.
+<p align="justify">
+This paper describes the extraction of parallel corpora from clustered news articles using annotated seed corpora and an SVM classifier, demonstrating that large parallel corpora can be induced by a classifier that includes morphological and synonymy features derived from both statis and dynamic resources.
+<p align="justify">
 
-This work actually refines the output of the second heuristic proposed by [Dolan, et al. (2004)](http://www.aclweb.org/anthology/C04-1051.pdf) which assumes that the early sentences of a news article will tend to summarize the whole article and are thus likely to contain the same information as other early sentences of other articles in the cluster. This heuristic is a text-feature-based heuristic in which the first two sentences of each article in a cluster are cross-matched with each other to find out paraphrasing sentences.
+<p align="justify">
+This work actually refines the output of the second heuristic proposed by <a href="http://www.aclweb.org/anthology/C04-1051.pdf">Dolan, et al. (2004)</a> which assumes that the early sentences of a news article will tend to summarize the whole article and are thus likely to contain the same information as other early sentences of other articles in the cluster. This heuristic is a text-feature-based heuristic in which the first two sentences of each article in a cluster are cross-matched with each other to find out paraphrasing sentences.
+<p align="justify">
 
-For SVM, they have used the implementation of the **Sequential Minimal Optimization (SMO)** algorithm described in [Platt (1999)](http://www.cs.utsa.edu/~bylander/cs6243/smo-book.pdf). SMO offers the benefit of relatively short training times over very large feature sets, and in particular, appears well suited to handling the sparse features encountered in natural language classification tasks.
-
+<p align="justify">
+For SVM, they have used the implementation of the <b>Sequential Minimal Optimization (SMO)</b> algorithm described in <a href="http://www.cs.utsa.edu/~bylander/cs6243/smo-book.pdf">Platt (1999)</a>. SMO offers the benefit of relatively short training times over very large feature sets, and in particular, appears well suited to handling the sparse features encountered in natural language classification tasks.
+<p align="justify">
 
 **Expermental Dataset**: [Microsoft Research Paraphrase Corpus](https://github.com/wasiahmad/Paraphrase-Identification-Task/tree/master/Dataset/MSRParaphraseCorpus).
 
@@ -36,10 +41,13 @@ For SVM, they have used the implementation of the **Sequential Minimal Optimizat
 
 #### [Dynamic Pooling and Unfolding Recursive Autoencoders for Paraphrase Detection](http://papers.nips.cc/paper/4204-dynamic-pooling-and-unfolding-recursive-autoencoders-for-paraphrase-detection.pdf)
 
-**Essence**: This paper leveraged and extended the method described in Recursive Autoencoder by [Socher et. al](http://dl.acm.org/citation.cfm?id=2145450). Prior feeding data to RAE, they build binary parse tree from test corpus. Recursive autoencoder is a recursive neural network, which recursively learns representation of words as well as other non terminals in the parse tree. They extended RAE as Unfolding RAE, which decodes the non-terminal down to the terminal level.
+<p align="justify">
+This paper leveraged and extended the method described in Recursive Autoencoder by <a href="http://dl.acm.org/citation.cfm?id=2145450">Socher et. al</a>. Prior feeding data to RAE, they build binary parse tree from test corpus. Recursive autoencoder is a recursive neural network, which recursively learns representation of words as well as other non terminals in the parse tree. They extended RAE as Unfolding RAE, which decodes the non-terminal down to the terminal level.
+<p align="justify">
 
+<p align="justify">
 They introduced dynamic pooling approach which generates fixed sized similarity matrix between words and non-terminals from variable sized matrix. They used the similarity matrix along with 3 additional features for classifying paraphrases. Those additional features are, The ﬁrst is 1 if two sentences contain exactly the same numbers or no number and 0 otherwise, the second is 1 if both sentences contain the same numbers and the third is 1 if the set of numbers in one sentence is a strict subset of the numbers in the other sentence. 
-
+<p align="justify">
 
 **Experimental Dataset & Result**: [Microsoft Research Paraphrase Corpus](https://github.com/wasiahmad/Paraphrase-Identification-Task/tree/master/Dataset/MSRParaphraseCorpus). Accuracy is 76.8% and F1 score is 83.6%. 
 
@@ -59,9 +67,13 @@ They introduced dynamic pooling approach which generates fixed sized similarity 
 
 #### [Multi-Perspective Sentence Similarity Modeling with Convolutional Neural Networks](http://aclweb.org/anthology/D/D15/D15-1181.pdf)
 
-**Essence**: In this work, they claim that their algorithm will do better with low amount of data, as it investigates intrinsic features in different granularity. But they did not provide any substantial proof. They used convolutional-neural-networks to obtain sentence embeddings. They used convolutional-neural-networks in multiple granularity. Every word in a sentence is represented as a word embedding vector. They used convolution on both whole word embedding and every dimension of the embedding. Based on that, they grouped convolutions into 2 groups.
+<p align="justify">
+In this work, they claim that their algorithm will do better with low amount of data, as it investigates intrinsic features in different granularity. But they did not provide any substantial proof. They used convolutional-neural-networks to obtain sentence embeddings. They used convolutional-neural-networks in multiple granularity. Every word in a sentence is represented as a word embedding vector. They used convolution on both whole word embedding and every dimension of the embedding. Based on that, they grouped convolutions into 2 groups.
+<p align="justify">
 
+<p align="justify">
 GroupA for whole word embedding and GroupB for per-dimension convolution. They used 3 types of pooling function (i.e. Max, Min. Mean) for group1 and 2 types (Max, Min) for GroupB. Although, they used identical convolutionNN for each of the pooling, but they maintained different NN instead. They also incorporated multiple window sizes for different filters including W_s(window size) to be infinite (which, infact, considers the whole sentence). On top of the pooling layer, they have a similarity measurement layer which uses a specific similarity measurement of 2 sentence representation and passes it to a fully connected softmax layer. 
+<p align="justify">
 
 **Experimental Dataset & Result**: They used the following three datasets.
  1. [Microsoft Research Paraphrase Corpus](https://github.com/wasiahmad/Paraphrase-Identification-Task/tree/master/Dataset/MSRParaphraseCorpus): Accuracy 78.60%, F1 score 84.73%
@@ -85,7 +97,9 @@ For MSRP, they used hinge loss function as trainning and for other 2, they used 
 
 #### [Corpus-based and Knowledge-based Measures of Text Semantic Similarity](http://www.aaai.org/Papers/AAAI/2006/AAAI06-123.pdf)
 
-**Essence**: This paper demonstrates the effectiveness of two corpus-based and six knowledge-based measures for text semantic similarity. Main idea to measure semantic similarity of texts by exploiting the information that can be drawn from the similarity of the component words. Two corpus-based measures are [Pointwise Mutual Information](https://en.wikipedia.org/wiki/Pointwise_mutual_information) and [Latent Semantic Analysis](https://en.wikipedia.org/wiki/Latent_semantic_analysis). Six knowledge-based measures are [Leacock & Chodorow](http://www.aclweb.org/anthology/J98-1006.pdf) similarity, [Lesk](http://dl.acm.org/citation.cfm?id=318728) similarity, [Wu and Palmer](http://dl.acm.org/citation.cfm?id=981751) similarity, [Resnik](https://arxiv.org/abs/cmp-lg/9511007) similarity, [Lin](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.55.1832&rep=rep1&type=pdf) similarity and [Jiang & Conrath](https://arxiv.org/abs/cmp-lg/9709008) similarity.
+<p align="justify">
+This paper demonstrates the effectiveness of two corpus-based and six knowledge-based measures for text semantic similarity. Main idea to measure semantic similarity of texts by exploiting the information that can be drawn from the similarity of the component words. Two corpus-based measures are [Pointwise Mutual Information](https://en.wikipedia.org/wiki/Pointwise_mutual_information) and [Latent Semantic Analysis](https://en.wikipedia.org/wiki/Latent_semantic_analysis). Six knowledge-based measures are [Leacock & Chodorow](http://www.aclweb.org/anthology/J98-1006.pdf) similarity, [Lesk](http://dl.acm.org/citation.cfm?id=318728) similarity, [Wu and Palmer](http://dl.acm.org/citation.cfm?id=981751) similarity, [Resnik](https://arxiv.org/abs/cmp-lg/9511007) similarity, [Lin](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.55.1832&rep=rep1&type=pdf) similarity and [Jiang & Conrath](https://arxiv.org/abs/cmp-lg/9709008) similarity.
+<p align="justify">
 
 **Expermental Dataset & Result**: [Microsoft Research Paraphrase Corpus](https://github.com/wasiahmad/Paraphrase-Identification-Task/tree/master/Dataset/MSRParaphraseCorpus). Accuracy is 70.3% and F1 score is 81.3%.
 
@@ -103,9 +117,13 @@ For MSRP, they used hinge loss function as trainning and for other 2, they used 
 
 #### [Re-examining Machine Translation Metrics for Paraphrase Identification](http://www.aclweb.org/anthology/N12-1019.pdf)
 
-**Essence**: The goal of this paper was to determine whether approaches developed for the related but different task of Machine Translation (MT) evaluation can be as competitive as approaches developed specifically for the task of paraphrase identification. It is reported that a meta-classifier trained using only MT metrics outperforms all previous approaches for the MSRP corpus. They used a simple meta-classifier that uses the average of the unweighted probability estimates from the constituent classifiers to make its final decision. They used three constituent classifiers: Logistic regression, the SMO implementation of a support vector machine and a lazy, instance-based classifier that extends the nearest neighbor algorithm.
+<p align="justify">
+The goal of this paper was to determine whether approaches developed for the related but different task of Machine Translation (MT) evaluation can be as competitive as approaches developed specifically for the task of paraphrase identification. It is reported that a meta-classifier trained using only MT metrics outperforms all previous approaches for the MSRP corpus. They used a simple meta-classifier that uses the average of the unweighted probability estimates from the constituent classifiers to make its final decision. They used three constituent classifiers: Logistic regression, the SMO implementation of a support vector machine and a lazy, instance-based classifier that extends the nearest neighbor algorithm.
+<p align="justify">
 
+<p align="justify">
 They explored eight most sophisticated MT metrics of the last few years that claim to go beyond simple n-gram overlap and edit distance. The metrices are [BLEU](http://www.aclweb.org/anthology/P02-1040.pdf), [NIST](http://dl.acm.org/citation.cfm?id=1289273), [TER](https://www.cs.umd.edu/~snover/pub/amta06/ter_amta.pdf), [TERp](http://link.springer.com/article/10.1007/s10590-009-9062-9), [METEOR](http://www.cs.cmu.edu/~alavie/papers/meteor-naacl2010.pdf), [SEPIA](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.219.4894&rep=rep1&type=pdf), [BADGER](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.219.6503&rep=rep1&type=pdf) and [MAXSIM](https://www.comp.nus.edu.sg/~nght/pubs/acl08.pdf). They have identified TERp, METEOR, BADGER and SEPIA as the best four metrices and also given good examples to demonstrate their effectiveness. They have done rigorous error analysis and presented top 5 & 3 sources of errors in the MSRP and MT-Metrics-Paraphrase corpus respectively. They suggested few improvements through incorporating world knowledge, anophora resolution system or giving more weights on the differences in proper names and their variants.
+<p align="justify">
 
 **Expermental Dataset & Result**: [Microsoft Research Paraphrase Corpus](https://github.com/wasiahmad/Paraphrase-Identification-Task/tree/master/Dataset/MSRParaphraseCorpus) and [MT-Metrics-Paraphrase-Corpus](https://github.com/wasiahmad/Paraphrase-Identification-Task/tree/master/Dataset/MT-Metrics-Paraphrase-Corpus). Accuracy is 77.4% and F1 score is 84.1%.
 
@@ -123,9 +141,13 @@ They explored eight most sophisticated MT metrics of the last few years that cla
 
 #### [Discriminative Improvements to Distributional Sentence Similarity](http://www.aclweb.org/anthology/D/D13/D13-1090.pdf)
 
-**Essence**: The main contribution of this work is proposing a new term-weighting metric called TF-KLD which includes term frequency and KL-divergence. TF-KLD measures the discriminability of a feature and the newly reweighted feature-context matrix factorization yields better semantic relatedness between a pair of paraphrased sentences. Moreover, they have converted latent representation of a pair of sentences into a sample vector by concatenating the element-wise sum and absolute difference of vector representations. This representation is further used in supervised classification of sentence paraphrasing. 
+<p align="justify">
+The main contribution of this work is proposing a new term-weighting metric called TF-KLD which includes term frequency and KL-divergence. TF-KLD measures the discriminability of a feature and the newly reweighted feature-context matrix factorization yields better semantic relatedness between a pair of paraphrased sentences. Moreover, they have converted latent representation of a pair of sentences into a sample vector by concatenating the element-wise sum and absolute difference of vector representations. This representation is further used in supervised classification of sentence paraphrasing. 
+<p align="justify">
 
+<p align="justify">
 They have experimented from two perspectives, namely, similarity-based classification and supervised classification. For similarity-based classification, they have used TF-KLD weighting with SVD (Singular Value Decomposition) and NMF (Non-negative Matrix Factorization) and found that NMF is performing slightly better than SVD. For supervised classification, they have used Support Vector Machines. For all of the experiments, they have used two different distribution feature sets. First one included only unigrams while the second one also includes bigrams and unlabeled dependency pairs obtained from [MaltParser](http://stp.lingfil.uu.se/~nivre/docs/nivre_hall_2005.pdf).
+<p align="justify">
 
 **Expermental Dataset & Result**: [Microsoft Research Paraphrase Corpus](https://github.com/wasiahmad/Paraphrase-Identification-Task/tree/master/Dataset/MSRParaphraseCorpus). Accuracy is 80.4% and F1 score is 85.9%.
 
@@ -144,9 +166,13 @@ They have experimented from two perspectives, namely, similarity-based classific
 
 #### [Syntax-Aware Multi-Sense Word Embeddings for Deep Compositional Models of Meaning](http://www.aclweb.org/anthology/D/D15/D15-1177.pdf)
 
-**Essence**: This work proposes an architecture for jointly training a compositional model and a set of word embeddings, in a way that imposes dynamic word sense induction for each word during the learning process. The learning takes places in the context of a RecNN (or an RNN), and both word embeddings and parameters of the compositional layer are optimized against a generic objective function that uses a hinge loss function. Novelty of their work is an additional layer on top of the compositional layer which scores the linguistic plausibility of the composed sentence or phrase vector with regard to both syntax and semantics.
+<p align="justify">
+This work proposes an architecture for jointly training a compositional model and a set of word embeddings, in a way that imposes dynamic word sense induction for each word during the learning process. The learning takes places in the context of a RecNN (or an RNN), and both word embeddings and parameters of the compositional layer are optimized against a generic objective function that uses a hinge loss function. Novelty of their work is an additional layer on top of the compositional layer which scores the linguistic plausibility of the composed sentence or phrase vector with regard to both syntax and semantics.
+<p align="justify">
 
-They extended their model to address lexical ambiguity by applying a gated architecture, similar to the one used in the multi-sense model of [Neelakantan et al.](https://arxiv.org/pdf/1504.06654.pdf), but advancing the main idea to the compositional setting. They have adopted [siamese architecture](https://papers.nips.cc/paper/769-signature-verification-using-a-siamese-time-delay-neural-network.pdf) for paraphrase detection. They have considered both L2 norm variation and cosine similarity to compare sentence vectors produced by RecNN or RNN.
+<p align="justify">
+They extended their model to address lexical ambiguity by applying a gated architecture, similar to the one used in the multi-sense model of <a href="https://arxiv.org/pdf/1504.06654.pdf">Neelakantan et al.</a>, but advancing the main idea to the compositional setting. They have adopted <a href="https://papers.nips.cc/paper/769-signature-verification-using-a-siamese-time-delay-neural-network.pdf">siamese architecture</a> for paraphrase detection. They have considered both L2 norm variation and cosine similarity to compare sentence vectors produced by RecNN or RNN.
+<p align="justify">
 
 **Expermental Dataset & Result**: [Microsoft Research Paraphrase Corpus](https://github.com/wasiahmad/Paraphrase-Identification-Task/tree/master/Dataset/MSRParaphraseCorpus), [PPDB: The Paraphrase Database](http://www.cis.upenn.edu/~ccb/ppdb/). Accuracy is 78.6% and F1 score is 85.3%.
 
@@ -162,9 +188,13 @@ They extended their model to address lexical ambiguity by applying a gated archi
 
 #### [Using Dependency-Based Features to Take the “Para-farce” out of Paraphrase](http://www.alta.asn.au/events/altw2006/proceedings/swan-final.pdf)
 
-**Essence**: This work investigates whether features based on syntactic dependencies can aid in paraphrase identification. This work proposes a machine learning approach based on syntactic dependency information to filter out false paraphrases. This work explored **17** different features of **4** kinds, namely, **N-gram Overlap**, **Dependency Relation Overlap**, **Dependency Tree-Edit Distance** and **Surface** features.
+<p align="justify">
+This work investigates whether features based on syntactic dependencies can aid in paraphrase identification. This work proposes a machine learning approach based on syntactic dependency information to filter out false paraphrases. This work explored 17 different features of 4 kinds, namely, N-gram Overlap, Dependency Relation Overlap, Dependency Tree-Edit Distance and Surface features.
+<p align="justify">
 
-For the **N-gram Overlap** features, they used precision, recall on unigrams, lemmatised unigrams, Bleu, lemmatised Bleu and fmeasure. For **Dependency Relation Overlap** features, they used precision, recall on dependency relation and lemmatised dependency relation. For **Dependency Tree-Edit Distance** features, they used an ordered tree-edit distance algorithm based on dynamic programming. For **Surface** features, they used the difference in length of two sentences.
+<p align="justify">
+For the <b>N-gram Overlap</b> features, they used precision, recall on unigrams, lemmatised unigrams, Bleu, lemmatised Bleu and fmeasure. For <b>Dependency Relation Overlap</b> features, they used precision, recall on dependency relation and lemmatised dependency relation. For <b>Dependency Tree-Edit Distance</b> features, they used an ordered tree-edit distance algorithm based on dynamic programming. For <b>Surface</b> features, they used the difference in length of two sentences.
+<p align="justify">
 
 **Expermental Dataset & Result**: [Microsoft Research Paraphrase Corpus](https://github.com/wasiahmad/Paraphrase-Identification-Task/tree/master/Dataset/MSRParaphraseCorpus). Accuracy is 75.6% and F1 score is 83%. 
 
@@ -181,7 +211,9 @@ For the **N-gram Overlap** features, they used precision, recall on unigrams, le
 
 #### [A Semantic Similarity Approach to Paraphrase Detection](http://staffwww.dcs.shef.ac.uk/people/S.Fernando/pubs/clukPaper.pdf)
 
-**Essence**: This work presents an algorithm for paraphrase identification which makes extensive use of word similarity information derived from WordNet. This work uses all word-to-word similarities in a pair of sentences. To compute word-to-word similarity, they considered six different similarity metric, namely [Leacock & Chodorow](http://www.aclweb.org/anthology/J98-1006.pdf) similarity, [Lesk](http://dl.acm.org/citation.cfm?id=318728) similarity, [Wu and Palmer](http://dl.acm.org/citation.cfm?id=981751) similarity, [Resnik](https://arxiv.org/abs/cmp-lg/9511007) similarity, [Lin](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.55.1832&rep=rep1&type=pdf) similarity and [Jiang & Conrath](https://arxiv.org/abs/cmp-lg/9709008) similarity.
+<p align="justify">
+This work presents an algorithm for paraphrase identification which makes extensive use of word similarity information derived from WordNet. This work uses all word-to-word similarities in a pair of sentences. To compute word-to-word similarity, they considered six different similarity metric, namely [Leacock & Chodorow](http://www.aclweb.org/anthology/J98-1006.pdf) similarity, [Lesk](http://dl.acm.org/citation.cfm?id=318728) similarity, [Wu and Palmer](http://dl.acm.org/citation.cfm?id=981751) similarity, [Resnik](https://arxiv.org/abs/cmp-lg/9511007) similarity, [Lin](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.55.1832&rep=rep1&type=pdf) similarity and [Jiang & Conrath](https://arxiv.org/abs/cmp-lg/9709008) similarity.
+<p align="justify">
 
 **Expermental Dataset & Result**: [Microsoft Research Paraphrase Corpus](https://github.com/wasiahmad/Paraphrase-Identification-Task/tree/master/Dataset/MSRParaphraseCorpus). Accuracy is 74.1% and F1 score is 82.4%. 
 
@@ -199,9 +231,13 @@ For the **N-gram Overlap** features, they used precision, recall on unigrams, le
 
 #### [Paraphrase Recognition via Dissimilarity Significance Classification](https://www.comp.nus.edu.sg/~kanmy/papers/paraphrase_emnlp2006.pdf)
 
-**Essence**: This work proposes a two-phase framework emphasizing dissimilarity classification between a pair of sentence. In the first phase, they pair up tuples (predicate, argument) in a **greedy** manner. In the second phase, a dissimilarity classification module uses the lexical head of the predicates and the tuples' path of attachment as features to decide whether such tuples are barriers to paraphrase. The key idea is, for a pair of sentences to be a paraphrase, they must possess two attributes. (1) They share a substantial amount of information nuggets and (2) if extra information in the sentences exists, the effect of its removal is not significant.
+<p align="justify">
+This work proposes a two-phase framework emphasizing dissimilarity classification between a pair of sentence. In the first phase, they pair up tuples (predicate, argument) in a <b>greedy</b> manner. In the second phase, a dissimilarity classification module uses the lexical head of the predicates and the tuples' path of attachment as features to decide whether such tuples are barriers to paraphrase. The key idea is, for a pair of sentences to be a paraphrase, they must possess two attributes. (1) They share a substantial amount of information nuggets and (2) if extra information in the sentences exists, the effect of its removal is not significant.
+<p align="justify">
 
+<p align="justify">
 A pair of sentences first fed to a syntactic parser and then passed to a semantic role labeler to label predicate argument tuples. Then normalized tuple similarity scores are computed over the tuple pairs using a metric that accounts for similarities in both syntactic structure and content of each tuple. Then most similar predicate argument tuples are greedily paired together. Any remaining unpaired tuples represent extra information and passed to a dissimilarity classifier to decide whether such information is significant. The dissimilarity classifier uses supervised machine learning to make such a decision. 
+<p align="justify">
 
 **Expermental Dataset & Result**: [Microsoft Research Paraphrase Corpus](https://github.com/wasiahmad/Paraphrase-Identification-Task/tree/master/Dataset/MSRParaphraseCorpus) and [PASCAL Recognizing Textual Entailment (RTE) Challenge Corpus](https://tac.nist.gov//2011/RTE/index.html). Accuracy is 72.0% and F1 score is 81.6%. 
 
