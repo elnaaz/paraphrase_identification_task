@@ -72,7 +72,7 @@ In this work, they claim that their algorithm will do better with low amount of 
 <p align="justify">
 
 <p align="justify">
-GroupA for whole word embedding and GroupB for per-dimension convolution. They used 3 types of pooling function (i.e. Max, Min. Mean) for group1 and 2 types (Max, Min) for GroupB. Although, they used identical convolutionNN for each of the pooling, but they maintained different NN instead. They also incorporated multiple window sizes for different filters including W_s(window size) to be infinite (which, infact, considers the whole sentence). On top of the pooling layer, they have a similarity measurement layer which uses a specific similarity measurement of 2 sentence representation and passes it to a fully connected softmax layer. 
+GroupA for whole word embedding and GroupB for per-dimension convolution. They used 3 types of pooling function (i.e. Max, Min. Mean) for group1 and 2 types (Max, Min) for GroupB. Although, they used identical convolutionNN for each of the pooling, but they maintained different NN instead. They also incorporated multiple window sizes for different filters including W<sub>s</sub>(window size) to be infinite (which, infact, considers the whole sentence). On top of the pooling layer, they have a similarity measurement layer which uses a specific similarity measurement of 2 sentence representation and passes it to a fully connected softmax layer. 
 <p align="justify">
 
 **Experimental Dataset & Result**: They used the following three datasets.
@@ -193,7 +193,7 @@ This work investigates whether features based on syntactic dependencies can aid 
 <p align="justify">
 
 <p align="justify">
-For the <b>N-gram Overlap</b> features, they used precision, recall on unigrams, lemmatised unigrams, Bleu, lemmatised Bleu and fmeasure. For <b>Dependency Relation Overlap</b> features, they used precision, recall on dependency relation and lemmatised dependency relation. For <b>Dependency Tree-Edit Distance</b> features, they used an ordered tree-edit distance algorithm based on dynamic programming. For <b>Surface</b> features, they used the difference in length of two sentences.
+For the N-gram Overlap features, they used precision, recall on unigrams, lemmatised unigrams, Bleu, lemmatised Bleu and fmeasure. For Dependency Relation Overlap features, they used precision, recall on dependency relation and lemmatised dependency relation. For Dependency Tree-Edit Distance features, they used an ordered tree-edit distance algorithm based on dynamic programming. For Surface features, they used the difference in length of two sentences.
 <p align="justify">
 
 **Expermental Dataset & Result**: [Microsoft Research Paraphrase Corpus](https://github.com/wasiahmad/Paraphrase-Identification-Task/tree/master/Dataset/MSRParaphraseCorpus). Accuracy is 75.6% and F1 score is 83%. 
@@ -212,7 +212,7 @@ For the <b>N-gram Overlap</b> features, they used precision, recall on unigrams,
 #### [A Semantic Similarity Approach to Paraphrase Detection](http://staffwww.dcs.shef.ac.uk/people/S.Fernando/pubs/clukPaper.pdf)
 
 <p align="justify">
-This work presents an algorithm for paraphrase identification which makes extensive use of word similarity information derived from WordNet. This work uses all word-to-word similarities in a pair of sentences. To compute word-to-word similarity, they considered six different similarity metric, namely [Leacock & Chodorow](http://www.aclweb.org/anthology/J98-1006.pdf) similarity, [Lesk](http://dl.acm.org/citation.cfm?id=318728) similarity, [Wu and Palmer](http://dl.acm.org/citation.cfm?id=981751) similarity, [Resnik](https://arxiv.org/abs/cmp-lg/9511007) similarity, [Lin](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.55.1832&rep=rep1&type=pdf) similarity and [Jiang & Conrath](https://arxiv.org/abs/cmp-lg/9709008) similarity.
+This work presents an algorithm for paraphrase identification which makes extensive use of word similarity information derived from WordNet. This work uses all word-to-word similarities in a pair of sentences. To compute word-to-word similarity, they considered six different similarity metric, namely <a href="http://www.aclweb.org/anthology/J98-1006.pdf">Leacock and Chodorow</a> similarity, <a href="http://dl.acm.org/citation.cfm?id=318728">Lesk</a> similarity, <a href="http://dl.acm.org/citation.cfm?id=981751">Wu and Palmer</a> similarity, <a href="https://arxiv.org/abs/cmp-lg/9511007">Resnik</a> similarity, <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.55.1832&rep=rep1&type=pdf">Lin</a> similarity and <a href="https://arxiv.org/abs/cmp-lg/9709008">Jiang and Conrath</a> similarity.
 <p align="justify">
 
 **Expermental Dataset & Result**: [Microsoft Research Paraphrase Corpus](https://github.com/wasiahmad/Paraphrase-Identification-Task/tree/master/Dataset/MSRParaphraseCorpus). Accuracy is 74.1% and F1 score is 82.4%. 
@@ -232,7 +232,7 @@ This work presents an algorithm for paraphrase identification which makes extens
 #### [Paraphrase Recognition via Dissimilarity Significance Classification](https://www.comp.nus.edu.sg/~kanmy/papers/paraphrase_emnlp2006.pdf)
 
 <p align="justify">
-This work proposes a two-phase framework emphasizing dissimilarity classification between a pair of sentence. In the first phase, they pair up tuples (predicate, argument) in a <b>greedy</b> manner. In the second phase, a dissimilarity classification module uses the lexical head of the predicates and the tuples' path of attachment as features to decide whether such tuples are barriers to paraphrase. The key idea is, for a pair of sentences to be a paraphrase, they must possess two attributes. (1) They share a substantial amount of information nuggets and (2) if extra information in the sentences exists, the effect of its removal is not significant.
+This work proposes a two-phase framework emphasizing dissimilarity classification between a pair of sentence. In the first phase, they pair up tuples (predicate, argument) in a <i>greedy</i> manner. In the second phase, a dissimilarity classification module uses the lexical head of the predicates and the tuples' path of attachment as features to decide whether such tuples are barriers to paraphrase. The key idea is, for a pair of sentences to be a paraphrase, they must possess two attributes. (1) They share a substantial amount of information nuggets and (2) if extra information in the sentences exists, the effect of its removal is not significant.
 <p align="justify">
 
 <p align="justify">
