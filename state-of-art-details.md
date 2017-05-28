@@ -11,6 +11,8 @@
  8. [Using Dependency-Based Features to Take the “Para-farce” out of Paraphrase](#using-dependency-based-features-to-take-the-para-farce-out-of-paraphrase)
  9. [A Semantic Similarity Approach to Paraphrase Detection](#a-semantic-similarity-approach-to-paraphrase-detection)
  10. [Paraphrase recognition via dissimilarity significance classification](#paraphrase-recognition-via-dissimilarity-significance-classification)
+ 
+---
 
 #### [Support Vector Machines for Paraphrase Identification and Corpus Construction](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/I05-50015B15D.pdf)
 
@@ -38,6 +40,8 @@ For SVM, they have used the implementation of the <b>Sequential Minimal Optimiza
   year={2005}
 }
 ```
+
+---
 
 #### [Dynamic Pooling and Unfolding Recursive Autoencoders for Paraphrase Detection](http://papers.nips.cc/paper/4204-dynamic-pooling-and-unfolding-recursive-autoencoders-for-paraphrase-detection.pdf)
 
