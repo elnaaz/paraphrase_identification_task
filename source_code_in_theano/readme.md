@@ -14,5 +14,5 @@ Our proposed model is shown below.
 <p align="justify">
 
 <p align="center">
-<img src="http://i.imgur.com/pkJyUKG.png" width="85%">
+<img src="http://i.imgur.com/aOolTRg.png" width="85%">
 <p align="center">
